@@ -1,0 +1,62 @@
+% Use the elsarticle class and bibliography style supplied with this template.
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+  citecolor=blue,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdftitle={AI-assisted data discovery and analysis for solar physics: the StiXpert approach},
+  pdfauthor={Hualin Xiao}
+}
+\usepackage[utf8]{inputenc}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\journal{Astronomy and Computing}
+
+\begin{document}
+
+\begin{frontmatter}
+
+  \title{AI-assisted data discovery and analysis for solar physics:
+    the StiXpert approach}
+
+  \author[inst1,inst2]{Hualin Xiao\corref{cor1}}
+  \ead{hualin.xiao@fhnw.ch}
+  \cortext[cor1]{Corresponding author}
+
+  \address[inst1]{University of Applied Sciences and Arts Northwestern
+    Switzerland (FHNW), Switzerland}
+  \address[inst2]{Physikalisch-Meteorologisches Observatorium Davos/World
+    Radiation Center (PMOD/WRC), Davos, Switzerland}
+
+  \begin{abstract}
+    Solar-flare studies combine observations and analysis software from multiple
+    instruments.
+    We present StiXpert, an AI-assisted service developed around STIX for retrieving
+    solar-physics knowledge, discovering relevant observations and methods, and
+    supporting analysis code.
+    Its knowledge base includes solar-physics context, STIX instrument knowledge and
+    software, STIX Data Center resources, and selected SSWIDL material spanning multiple
+    instruments.
+    Its main capabilities are knowledge discovery and assistance with data analysis,
+    supporting solar research across instruments.
+  \end{abstract}
+
+  \begin{keyword}
+    Solar physics \sep Solar flares \sep STIX \sep Artificial intelligence
+    \sep Knowledge base \sep Data discovery \sep Scientific software
+  \end{keyword}
+
+\end{frontmatter}
+
+\input{mainText}
+
+\bibliographystyle{elsarticle-num-names}
+\bibliography{bibsample}
+
+\end{document}

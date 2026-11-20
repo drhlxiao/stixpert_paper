@@ -1,0 +1,64 @@
+\begin{thebibliography}{6}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Freeland and Handy(1998)}]{freeland1998}
+\bibinfo{author}{S.~L. Freeland}, \bibinfo{author}{B.~N. Handy},
+\newblock \bibinfo{title}{Data analysis with the solarsoft system},
+\newblock \bibinfo{journal}{Solar Physics} \bibinfo{volume}{182}
+  (\bibinfo{year}{1998}) \bibinfo{pages}{497--500}.
+  \DOIprefix\doi{10.1023/A:1005038224881}.
+%Type = Article
+\bibitem[{{The SunPy Community}(2020)}]{sunpy2020}
+\bibinfo{author}{{The SunPy Community}},
+\newblock \bibinfo{title}{The sunpy project: Open source development and status
+  of the version 1.0 core package},
+\newblock \bibinfo{journal}{The Astrophysical Journal} \bibinfo{volume}{890}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{68}.
+  \DOIprefix\doi{10.3847/1538-4357/ab4f7a}.
+%Type = Article
+\bibitem[{{Astropy Collaboration} et~al.(2018){Astropy Collaboration},
+  Price-Whelan et~al.}]{astropy2018}
+\bibinfo{author}{{Astropy Collaboration}}, \bibinfo{author}{A.~M.
+  Price-Whelan}, et~al.,
+\newblock \bibinfo{title}{The {Astropy} project: Building an open-science
+  project and status of the v2.0 core package},
+\newblock \bibinfo{journal}{The Astronomical Journal} \bibinfo{volume}{156}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{123}.
+  \DOIprefix\doi{10.3847/1538-3881/aabc4f}.
+%Type = Inproceedings
+\bibitem[{Lewis et~al.(2020)}]{lewis2020}
+\bibinfo{author}{P.~Lewis}, et~al.,
+\newblock \bibinfo{title}{Retrieval-augmented generation for
+  knowledge-intensive {NLP} tasks},
+\newblock in: \bibinfo{booktitle}{Advances in Neural Information Processing
+  Systems}, volume~\bibinfo{volume}{33}, \bibinfo{year}{2020}, pp.
+  \bibinfo{pages}{9459--9474}. \href{http://arxiv.org/abs/2005.11401}{{\tt
+  arXiv:2005.11401}}.
+%Type = Misc
+\bibitem[{Yao et~al.(2023)}]{yao2023}
+\bibinfo{author}{S.~Yao}, et~al., \bibinfo{title}{React: Synergizing reasoning
+  and acting in language models}, \bibinfo{year}{2023}.
+  \href{http://arxiv.org/abs/2210.03629}{{\tt arXiv:2210.03629}},
+  \bibinfo{note}{presented at the International Conference on Learning
+  Representations}.
+%Type = Article
+\bibitem[{Krucker et~al.(2020)}]{krucker2020}
+\bibinfo{author}{S.~Krucker}, et~al.,
+\newblock \bibinfo{title}{The spectrometer/telescope for imaging x-rays
+  (stix)},
+\newblock \bibinfo{journal}{Astronomy \& Astrophysics} \bibinfo{volume}{642}
+  (\bibinfo{year}{2020}) \bibinfo{pages}{A15}.
+  \DOIprefix\doi{10.1051/0004-6361/201937362}.
+
+\end{thebibliography}
