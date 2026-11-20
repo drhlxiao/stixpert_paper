@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1795212138.31657 "manuscript.aux" "manuscript.bbl" "manuscript" 1795212177.93303 0
+["bibtex manuscript"] 1795212138.31657 "manuscript.aux" "manuscript.bbl" "manuscript" 1795212229.18429 0
   "./bibsample.bib" 1795210068.28872 4322 e179c4eb9ca7a347eb2760aef9866981 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/elsarticle/elsarticle-num-names.bst" 1767996394 28896 ef8ea1833e4d69d9f60b6db23b4bea61 ""
-  "manuscript.aux" 1795212177.71336 6701 ef7bb2a1671d72f8ed59b408376a413c "pdflatex"
+  "manuscript.aux" 1795212228.94847 6701 ef7bb2a1671d72f8ed59b408376a413c "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1795212177.05392 "manuscript.tex" "manuscript.pdf" "manuscript" 1795212177.93315 0
+["pdflatex"] 1795212228.30732 "manuscript.tex" "manuscript.pdf" "manuscript" 1795212229.18447 0
   "/etc/texmf/web2c/texmf.cnf" 1791829044.29326 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -117,11 +117,11 @@
   "figures/pyexample.png" 1795185142.60831 485405 ee729e532961cc1979b7f5e3e1ead5c2 ""
   "figures/stixpert-diagram.pdf" 1795210993.05888 72456 8435756223940ad31a3a4e725e8114ed ""
   "mainText.tex" 1795212176.88334 11920 1f89f9b2272577d78d0006e6229ee740 ""
-  "manuscript.aux" 1795212177.71336 6701 ef7bb2a1671d72f8ed59b408376a413c "pdflatex"
+  "manuscript.aux" 1795212228.94847 6701 ef7bb2a1671d72f8ed59b408376a413c "pdflatex"
   "manuscript.bbl" 1795212138.40151 6655 2955aa1ca1e4558ce2be31daf090619f "bibtex manuscript"
-  "manuscript.out" 1795212177.71436 1625 552a10a33af7a4ff83ad7f466e2d785c "pdflatex"
-  "manuscript.spl" 1795212177.20535 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "manuscript.tex" 1795209432.43857 1982 9b78bb4caa43abdc4e3748c194d054a6 ""
+  "manuscript.out" 1795212228.94847 1625 552a10a33af7a4ff83ad7f466e2d785c "pdflatex"
+  "manuscript.spl" 1795212228.45446 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "manuscript.tex" 1795212228.23712 1979 742e5536db12755386f5cf0336a51e66 ""
   (generated)
   "manuscript.aux"
   "manuscript.log"
