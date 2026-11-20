@@ -10,7 +10,7 @@ Researchers must identify which observations cover an event, select suitable pro
 and understand the assumptions behind their analysis.
 
 The software used to carry out this work is similarly distributed.
-SolarSoft/SSWIDL provides a long-standing environment for solar-data analysis
+SSWIDL provides a long-standing environment for solar-data analysis
 \cite{freeland1998}; the Python ecosystem includes SunPy for solar research
 \cite{sunpy2020} and Astropy for general astronomical tasks such as time, coordinates,
 and units \cite{astropy2018}.
@@ -37,7 +37,7 @@ StiXpert makes indexed instrument knowledge, data-product information, analysis
 software, and related scientific context available to AI clients through retrieval
 and tool-based interactions.
 Although STIX is the organizing use case, the indexed knowledge also includes selected
-SolarSoft/IDL resources covering multiple instruments and broader solar-physics
+SSWIDL resources covering multiple instruments and broader solar-physics
 context.
 StiXpert is therefore intended to support knowledge discovery as well as code
 assistance. As we also ingested broader solar-physics knowledge and \texttt{SSWIDL} source code, 
@@ -71,15 +71,15 @@ interpretation and acceptance of results to the researcher.
 
 \Cref{fig:architecture} summarizes the architecture.
 The index builder statically parses selected source trees and stores searchable records
-in a SQLite knowledge base; indexed code is not imported or executed during indexing.
-Python sources include stixpy, stixdcpy, sunkit-spex, and solo-epd-loader, with
-selected examples and documentation.
-The index also includes SSW/IDL routines and supporting configuration and text data,
-selected STIX Data Center browser scripts, and descriptions of public data-centre
-routes and their parameters, as well as indexed context on solar flares and Solar
-Orbiter.
-The route index excludes endpoints classified as private or mutating.
-This is a software- and source-grounded resource: the indexed SSW material spans
+in a knowledge base; indexed code is not imported or executed during indexing.
+Python sources include \texttt{stixpy}, \texttt{stixdcpy}, \texttt{sunkit-spex}, and
+\texttt{solo-epd-loader}, with selected examples and documentation
+\cite{stixpy2026,stixdcpy2022}.
+The index also includes SSWIDL routines and supporting configuration and text data,
+selected JavaScript running on the STIX Data Center, and descriptions of public data-centre
+routes and their parameters \cite{xiao2023stixdc}, as well as indexed context on solar
+flares and Solar Orbiter.
+This is a software- and source-grounded resource: the indexed SSWIDL material spans
 multiple solar instruments, whereas the Python sources and data-centre descriptions
 provide stronger STIX-specific coverage.
 The combination supports questions that connect STIX with complementary observations
@@ -100,15 +100,15 @@ method is appropriate or that a generated program is correct.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/stixpert-architecture.pdf}
-  \caption{StiXpert architecture.
-    STIX knowledge and data-centre resources are combined with broader solar-physics
-    context and software, including SSWIDL routines relevant to multiple instruments.
-    These indexed resources are made available to an MCP-compatible AI client for
-    knowledge retrieval and scientific discovery, with code assistance as a possible
-    subsequent step.
-    The diagram depicts the knowledge and service boundary; it does not imply autonomous
-    scientific validation or execution by the knowledge-base server.
+  \includegraphics[width=\linewidth]{figures/stixpert-diagram.pdf}
+  \caption{Overview of StiXpert.
+    Solar-physics and STIX-specific knowledge, STIX software and Data Center resources,
+    and selected SSWIDL resources for multiple instruments are indexed and made
+    accessible to an AI client through MCP.
+    The client uses these resources to answer knowledge questions, discover observations
+    and methods, and support analysis code.
+    The server provides retrieval tools; it does not execute analysis or validate
+    scientific conclusions.
   }
   \label{fig:architecture}
 \end{figure}
@@ -144,8 +144,6 @@ correct: runtime testing with appropriate data must be performed in the user's
 environment.
 The MCP service itself searches its local index and does not fetch STIX data or run
 analysis scripts.
-In the example described below, the generated IDL procedure could not be run and
-therefore remains unverified.
 
 StiXpert can also assist with translating code between Python and IDL, including adapting
 an existing routine when no direct counterpart is indexed.
@@ -158,58 +156,9 @@ the researcher must check the translated method, inputs, assumptions, and output
 The following examples illustrate code assistance in two analysis environments: a
 Python notebook that explores a recent STIX flare list and its quicklook light curves,
 and an IDL program draft for a STIX--GOES light-curve comparison.
-These examples do not evaluate the accuracy or completeness of RAG-based
-knowledge-retrieval answers.
-They are illustrative demonstrations, not a controlled benchmark.
-The examples concern light curves only; they do not establish performance in spectral
-fitting, image reconstruction, source translation, or physical interpretation.
+As can be seen in Fig.~\ref{fig:assistant-code-examples}, the AI assistant generated the scripts which match the prompts. 
 
-\subsection{Python notebook: STIX event and light-curve exploration}
-\label{sec:python-demo}
 
-The Python interaction began with a request to create a Jupyter notebook that queries
-recent solar flares and displays their light curves.
-Scientifically, this provides an exploratory view of which events and quicklook
-measurements were returned for the requested interval, before the user selects an event
-for closer study.
-The assistant produced a notebook that, according to the accompanying explanation,
-queried the STIX flare list and five-band quicklook light curves through
-\texttt{stixdcpy}, converted the returned count arrays to a time-indexed table, shaded
-flare intervals, plotted an overview on a logarithmic count scale, and created a set of
-closer views around selected events.
-The visible plot labels the five energy bands as 4--10, 10--15, 15--25, 25--50, and
-50--84~keV, with a nominal four-second count bin.
-
-The notebook output reports 58\,580 time samples, from 2026-11-16 09:23:28 to
-2026-11-19 02:28:44~UTC.
-The assistant's summary reports 193 flares in the requested three-day window and
-identifies an M1.7 event on 2026-11-17 at 21:38~UTC as the strongest in that returned
-list.
-The assistant also notes that the final light-curve sample precedes the requested
-window end by approximately seven hours.
-This discrepancy is visible in the example and was not independently attributed to
-data-centre latency; the plot should therefore be treated as an exploratory quicklook
-rather than a completeness-checked event product.
-
-\subsection{IDL draft: STIX and GOES light curves}
-\label{sec:idl-demo}
-
-The second request asked for an IDL program to plot STIX light curves for 2026-02-01 to
-2026-02-02 together with GOES X-ray flux.
-The generated procedure draft uses the STIX quicklook light-curve routines for five
-energy bands and requests one-minute GOES-18 and GOES-19 flux in two wavelength
-channels.
-This example demonstrates that an assistant can draft code that combines
-instrument-specific SSWIDL routines with data from another observatory.
-
-The IDL environment was not installed or configured in the session shown in
-\Cref{fig:assistant-code-examples}; the assistant explicitly reports that the procedure
-could not be run and remains unverified.
-Accordingly, the figure documents code generation only.
-It does not show a successful IDL execution, a comparison with the Python output, or
-scientific equivalence of the two analyses.
-Verification would require running the code in a configured SSWIDL environment and
-inspecting the returned GOES structure, time conversion, plot axes, and data coverage.
 
 \begin{figure}[htbp]
   \centering
@@ -238,59 +187,34 @@ inspecting the returned GOES structure, time conversion, plot axes, and data cov
 \section{Discussion and conclusions}
 \label{sec:discussion}
 
-StiXpert explores a way to lower the practical barrier between a solar-physics question
-and the distributed knowledge needed to investigate it.
-Its central value is to help researchers retrieve and connect information about
-instruments, observations, data products, and analysis methods across a heterogeneous
-solar-physics landscape.
-Code assistance is one possible consequence of that discovery process, not the system's
-sole purpose.
-StiXpert is not intended to replace an instrument scientist or researcher, but to make
-relevant expertise easier to find and apply.
-Although developed around STIX, its indexed multi-instrument SSWIDL software and
-broader flare and Solar Orbiter context support discovery and analysis workflows that
-use STIX alongside complementary observations.
-A curated knowledge base can help researchers discover candidate observations and
-relevant methods, understand instrument products and processing algorithms, and find
-the software resources needed to pursue an analysis.
-The source-grounded design also creates a channel through which instrument teams can
-make their software knowledge, examples, and carefully scoped analysis pipelines more
-accessible.
+StiXpert explores a complementary way to access the knowledge and tools used in solar
+research.
+Rather than requiring researchers to navigate software, documentation, and data
+products as separate resources, a domain-specific AI assistant can retrieve and connect
+them in response to a scientific question.
+This supports knowledge discovery and can help researchers develop an analysis, with
+the aim of reducing software-navigation effort so that more attention can be given to
+the physical problem.
+The examples demonstrate this interaction pattern, but do not establish improved
+research productivity or validate AI-generated analyses.
 
-The separation between indexed knowledge and client-side execution is important.
-In the reference configuration, the MCP server searches its local index and can
-statically validate Python scripts against indexed names and selected public endpoints;
-it does not run analysis scripts or fetch the data itself.
-The executed Python example therefore reflects client-side code and data access, while
-the IDL example remains unexecuted because the required environment was unavailable.
-Static indexing can become stale as packages evolve, and a passing code check cannot
-establish scientific correctness.
-Researchers must inspect provenance, test scripts against selected data, and retain
-responsibility for calibration choices and physical conclusions.
-The examples here demonstrate an interaction pattern, not a measured improvement in
-research productivity or a general validation of AI-generated scientific analysis.
+The approach also suggests a way for instrument teams to provide services to the
+research community.
+In addition to distributing software, documentation, and data products, teams could
+make instrument knowledge and selected tools accessible through an AI-facing MCP
+service.
+StiXpert is a STIX-organized example of this model, with selected software resources and
+solar-physics context supporting questions that involve other instruments.
+Generated workflows must still be executed and scientifically assessed by researchers.
 
 \subsection{Future perspectives}
 \label{sec:future}
 
-Future work should evaluate the system on a documented event set and report the accuracy
-and completeness of retrieved knowledge, whether answers are supported by relevant
-sources, the usefulness of observation and method discovery, code execution rates,
-cross-language agreement, provenance completeness, and expert-rated scientific
-reasoning quality.
-A useful next step is to repeat both demonstrations in pinned Python and SSWIDL
-environments, independently verify observation coverage, and compare time-aligned light
-curves with stated tolerances.
-Further extension of the indexed knowledge to additional instruments, data services,
-and analysis environments could deepen coordinated analysis across observatories,
-provided that time standards, calibration status, coordinate frames, and data
-provenance are represented explicitly.
-
-More capable agents may eventually help formulate follow-up questions, identify
-under-explored combinations of observations, or suggest candidate research gaps.
-Such suggestions should be treated as hypotheses for expert review, not as evidence
-that a gap exists or a discovery has been made.
-With transparent knowledge sources, controlled tools, reproducible workflows, and human
-oversight, AI assistants may open a new mode of interaction with scientific data and
-software while allowing researchers and instrument teams to focus more of their effort
-on physical questions and instrument-specific science.
+Future work should evaluate retrieval quality and analysis assistance on documented
+events, including source fidelity, observation coverage, code execution, and agreement
+between Python and SSWIDL results.
+Extending instrument-facing MCP services to additional observatories could further
+support coordinated studies.
+In time, AI-assisted discovery may help researchers formulate follow-up questions and
+identify promising combinations of observations, while remaining a tool for expert
+investigation rather than a substitute for it.

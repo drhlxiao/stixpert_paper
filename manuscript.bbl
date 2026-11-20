@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{9}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -19,12 +19,34 @@
   (\bibinfo{year}{1998}) \bibinfo{pages}{497--500}.
   \DOIprefix\doi{10.1023/A:1005038224881}.
 %Type = Article
-\bibitem[{{The SunPy Community}(2020)}]{sunpy2020}
-\bibinfo{author}{{The SunPy Community}},
+\bibitem[{{The SunPy Community} et~al.(2020){The SunPy Community}, Barnes,
+  Bobra, Christe, Freij, Hayes, Ireland, Mumford, Perez-Suarez, Ryan, Shih,
+  Chanda, Glogowski, Hewett, Hughitt, Hill, Hiware, Inglis, Kirk, Konge, Mason,
+  Maloney, Murray, Panda, Park, Pereira, Reardon, Savage, Sipőcz, Stansby,
+  Jain, Taylor, Yadav, Rajul, and Dang}]{sunpy2020}
+\bibinfo{author}{{The SunPy Community}}, \bibinfo{author}{W.~T. Barnes},
+  \bibinfo{author}{M.~G. Bobra}, \bibinfo{author}{S.~D. Christe},
+  \bibinfo{author}{N.~Freij}, \bibinfo{author}{L.~A. Hayes},
+  \bibinfo{author}{J.~Ireland}, \bibinfo{author}{S.~Mumford},
+  \bibinfo{author}{D.~Perez-Suarez}, \bibinfo{author}{D.~F. Ryan},
+  \bibinfo{author}{A.~Y. Shih}, \bibinfo{author}{P.~Chanda},
+  \bibinfo{author}{K.~Glogowski}, \bibinfo{author}{R.~Hewett},
+  \bibinfo{author}{V.~K. Hughitt}, \bibinfo{author}{A.~Hill},
+  \bibinfo{author}{K.~Hiware}, \bibinfo{author}{A.~Inglis},
+  \bibinfo{author}{M.~S.~F. Kirk}, \bibinfo{author}{S.~Konge},
+  \bibinfo{author}{J.~P. Mason}, \bibinfo{author}{S.~A. Maloney},
+  \bibinfo{author}{S.~A. Murray}, \bibinfo{author}{A.~Panda},
+  \bibinfo{author}{J.~Park}, \bibinfo{author}{T.~M.~D. Pereira},
+  \bibinfo{author}{K.~Reardon}, \bibinfo{author}{S.~Savage},
+  \bibinfo{author}{B.~M. Sipőcz}, \bibinfo{author}{D.~Stansby},
+  \bibinfo{author}{Y.~Jain}, \bibinfo{author}{G.~Taylor},
+  \bibinfo{author}{T.~Yadav}, \bibinfo{author}{Rajul}, \bibinfo{author}{T.~K.
+  Dang},
 \newblock \bibinfo{title}{The sunpy project: Open source development and status
   of the version 1.0 core package},
 \newblock \bibinfo{journal}{The Astrophysical Journal} \bibinfo{volume}{890}
-  (\bibinfo{year}{2020}) \bibinfo{pages}{68}.
+  (\bibinfo{year}{2020}) \bibinfo{pages}{68}. \URLprefix
+  \url{https://iopscience.iop.org/article/10.3847/1538-4357/ab4f7a}.
   \DOIprefix\doi{10.3847/1538-4357/ab4f7a}.
 %Type = Article
 \bibitem[{{Astropy Collaboration} et~al.(2018){Astropy Collaboration},
@@ -60,5 +82,44 @@
 \newblock \bibinfo{journal}{Astronomy \& Astrophysics} \bibinfo{volume}{642}
   (\bibinfo{year}{2020}) \bibinfo{pages}{A15}.
   \DOIprefix\doi{10.1051/0004-6361/201937362}.
+%Type = Misc
+\bibitem[{Maloney et~al.(2026)Maloney, Clarke, Hayes, Ryan, Hochmuth, Massa,
+  Wilson, Collier, MHerrmann06, Ahdal, Hubbard, Christe, and Long}]{stixpy2026}
+\bibinfo{author}{S.~Maloney}, \bibinfo{author}{B.~Clarke},
+  \bibinfo{author}{L.~Hayes}, \bibinfo{author}{D.~F. Ryan},
+  \bibinfo{author}{N.~Hochmuth}, \bibinfo{author}{P.~Massa},
+  \bibinfo{author}{A.~Wilson}, \bibinfo{author}{H.~Collier},
+  \bibinfo{author}{MHerrmann06}, \bibinfo{author}{M.~Ahdal},
+  \bibinfo{author}{R.~Hubbard}, \bibinfo{author}{S.~Christe},
+  \bibinfo{author}{T.~Long}, \bibinfo{title}{{STIXpy}}, \bibinfo{year}{2026}.
+  \URLprefix \url{https://doi.org/10.5281/zenodo.20558556}.
+  \DOIprefix\doi{10.5281/zenodo.20558556}, \bibinfo{note}{version v0.3.0}.
+%Type = Misc
+\bibitem[{Xiao et~al.(2022)Xiao, Krucker, Lastufka, and
+  Setterberg}]{stixdcpy2022}
+\bibinfo{author}{H.~Xiao}, \bibinfo{author}{S.~Krucker},
+  \bibinfo{author}{E.~Lastufka}, \bibinfo{author}{W.~Setterberg},
+  \bibinfo{title}{{stixdcpy}: A python package that facilitates access and
+  analysis of stix data}, \bibinfo{year}{2022}. \URLprefix
+  \url{https://doi.org/10.5281/zenodo.7180433}.
+  \DOIprefix\doi{10.5281/zenodo.7180433}, \bibinfo{note}{version v2.0}.
+%Type = Article
+\bibitem[{Xiao et~al.(2023)Xiao, Maloney, Krucker, Dickson, Massa, Lastufka,
+  Battaglia, Etesi, Hochmuth, Schuller, Ryan, Limousin, Collier, Warmuth, and
+  Piana}]{xiao2023stixdc}
+\bibinfo{author}{H.~Xiao}, \bibinfo{author}{S.~Maloney},
+  \bibinfo{author}{S.~Krucker}, \bibinfo{author}{E.~Dickson},
+  \bibinfo{author}{P.~Massa}, \bibinfo{author}{E.~Lastufka},
+  \bibinfo{author}{A.~F. Battaglia}, \bibinfo{author}{L.~Etesi},
+  \bibinfo{author}{N.~Hochmuth}, \bibinfo{author}{F.~Schuller},
+  \bibinfo{author}{D.~F. Ryan}, \bibinfo{author}{O.~Limousin},
+  \bibinfo{author}{H.~Collier}, \bibinfo{author}{A.~Warmuth},
+  \bibinfo{author}{M.~Piana},
+\newblock \bibinfo{title}{The data center for the spectrometer and telescope
+  for imaging x-rays (stix) on board solar orbiter},
+\newblock \bibinfo{journal}{Astronomy \& Astrophysics} \bibinfo{volume}{673}
+  (\bibinfo{year}{2023}) \bibinfo{pages}{A142}. \URLprefix
+  \url{https://doi.org/10.1051/0004-6361/202346031}.
+  \DOIprefix\doi{10.1051/0004-6361/202346031}.
 
 \end{thebibliography}
