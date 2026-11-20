@@ -2,7 +2,7 @@
 \label{sec:intro}
 
 Solar-physics research often combines observations from instruments that differ in energy
-range, cadence, observing mode,  and data products.
+range, cadence, observing mode, and data products.
 A flare study may bring together hard and soft X-rays, solar energetic
 particles, extreme-ultraviolet images, radio measurements, and observations from
 spacecraft at different locations.
@@ -20,8 +20,8 @@ Moving among these resources can make it difficult to find the appropriate routi
 product, or method, particularly in studies that combine several instruments.
 
 Large language models (LLMs) can answer general questions and assist with code writing,
-but their broad capabilities do not ensure detailed knowledge of solar phenomena,
-instrument capabilities, let alone the data products, analysis methods, the software used to apply
+but their general training does not ensure detailed knowledge of solar phenomena,
+instrument capabilities, data products, analysis methods, or the software used to apply
 them.
 Retrieval-augmented generation (RAG) can ground answers in relevant source material
 \cite{lewis2020}, while tool-mediated agents can retrieve and use that information in
@@ -40,8 +40,7 @@ Although STIX is the organizing use case, the indexed knowledge also includes se
 SSWIDL resources covering multiple instruments and broader solar-physics
 context.
 StiXpert is therefore intended to support knowledge discovery as well as code
-assistance. As we also ingested broader solar-physics knowledge and \texttt{SSWIDL} source code, 
- the system can support research beyond STIX.
+assistance, and its scope extends beyond STIX.
 \section{StiXpert: architecture and interaction model}
 \label{sec:architecture}
 
@@ -76,11 +75,11 @@ Python sources include \texttt{stixpy}, \texttt{stixdcpy}, \texttt{sunkit-spex},
 \texttt{solo-epd-loader}, with selected examples and documentation
 \cite{stixpy2026,stixdcpy2022}.
 The index also includes SSWIDL routines and supporting configuration and text data,
-selected JavaScript running on the STIX Data Center, and descriptions of public data-centre
+selected JavaScript running on the STIX Data Center, and descriptions of public Data Center
 routes and their parameters \cite{xiao2023stixdc}, as well as indexed context on solar
 flares and Solar Orbiter.
 This is a software- and source-grounded resource: the indexed SSWIDL material spans
-multiple solar instruments, whereas the Python sources and data-centre descriptions
+multiple solar instruments, whereas the Python sources and Data Center descriptions
 provide stronger STIX-specific coverage.
 The combination supports questions that connect STIX with complementary observations
 without implying uniform documentation coverage for every instrument.
@@ -156,9 +155,7 @@ the researcher must check the translated method, inputs, assumptions, and output
 The following examples illustrate code assistance in two analysis environments: a
 Python notebook that explores a recent STIX flare list and its quicklook light curves,
 and an IDL program draft for a STIX--GOES light-curve comparison.
-As can be seen in Fig.~\ref{fig:assistant-code-examples}, the AI assistant generated the scripts which match the prompts. 
-
-
+\Cref{fig:assistant-code-examples} shows the code generated for both prompts.
 
 \begin{figure}[htbp]
   \centering
@@ -197,6 +194,8 @@ the aim of reducing software-navigation effort so that more attention can be giv
 the physical problem.
 The examples demonstrate this interaction pattern, but do not establish improved
 research productivity or validate AI-generated analyses.
+StiXpert is intended to assist with knowledge discovery and scientific data analysis,
+not to replace scientific judgment or authorship.
 
 The approach also suggests a way for instrument teams to provide services to the
 research community.
@@ -205,7 +204,9 @@ make instrument knowledge and selected tools accessible through an AI-facing MCP
 service.
 StiXpert is a STIX-organized example of this model, with selected software resources and
 solar-physics context supporting questions that involve other instruments.
-Generated workflows must still be executed and scientifically assessed by researchers.
+Instructions for using the service are available at
+\url{https://datacenter.stix.i4ds.net/view/research-ai-assistant}.
+
 
 \subsection{Future perspectives}
 \label{sec:future}

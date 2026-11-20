@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.12)  20 NOV 2026 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.12)  20 NOV 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,28 +449,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (16.8592pt too wide) in paragraph at lines 60--69
+Overfull \hbox (16.8592pt too wide) in paragraph at lines 59--68
 []\OT1/cmr/m/n/12 The de-sign fol-lows four prin-ci-ples. First, an-swers to sc
 i-en-tific and instrument-
  []
 
-<figures/stixpert-diagram.pdf, id=76, 752.8908pt x 323.7435pt>
+<figures/stixpert-diagram.pdf, id=75, 752.8908pt x 323.7435pt>
 File: figures/stixpert-diagram.pdf Graphic file (type pdf)
 <use figures/stixpert-diagram.pdf>
-Package pdftex.def Info: figures/stixpert-diagram.pdf  used on input line 103.
+Package pdftex.def Info: figures/stixpert-diagram.pdf  used on input line 102.
 (pdftex.def)             Requested size: 390.0pt x 167.70044pt.
 [3] [4 <./figures/stixpert-diagram.pdf>]
 <figures/pyexample.png, id=96, 1689.31125pt x 1161.33875pt>
 File: figures/pyexample.png Graphic file (type png)
 <use figures/pyexample.png>
-Package pdftex.def Info: figures/pyexample.png  used on input line 167.
+Package pdftex.def Info: figures/pyexample.png  used on input line 164.
 (pdftex.def)             Requested size: 191.10214pt x 131.36266pt.
 <figures/idlexample.png, id=98, 1511.6475pt x 1013.7875pt>
 File: figures/idlexample.png Graphic file (type png)
 <use figures/idlexample.png>
-Package pdftex.def Info: figures/idlexample.png  used on input line 174.
+Package pdftex.def Info: figures/idlexample.png  used on input line 171.
 (pdftex.def)             Requested size: 191.10214pt x 128.16176pt.
- [5]) (./manuscript.bbl [6 <./figures/pyexample.png> <./figures/idlexample.png>
+ [5 <./figures/pyexample.png> <./figures/idlexample.png>]) (./manuscript.bbl [6
 ]
 Underfull \hbox (badness 1845) in paragraph at lines 100--109
 []\OT1/cmr/m/n/12 H. Xiao, S. Krucker, E. Lastufka, W. Set-ter-berg, stixd-cpy:
@@ -498,7 +498,7 @@ Here is how much of TeX's memory you used:
  42318 multiletter control sequences out of 15000+600000
  636740 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,606b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,606b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
@@ -511,10 +511,10 @@ fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
-Output written on manuscript.pdf (7 pages, 882759 bytes).
+Output written on manuscript.pdf (7 pages, 882343 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 197 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
  31 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
